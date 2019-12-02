@@ -6,4 +6,10 @@ main {
         border-radius: 3px;
         margin-bottom: 30px;
     }
+
+    section {
+        h3 {
+            color: $titleColor;
+        }
+    }
 }

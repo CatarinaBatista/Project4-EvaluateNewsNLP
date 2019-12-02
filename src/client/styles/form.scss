@@ -1,10 +1,20 @@
+@import "colors.scss";
+
 form {
     padding: 40px;
-}
 
-input {
-    padding: 5px 20px;
-    width: 80%;
-    line-height: 16px;
-    margin: 10px 0;
+    input {
+        padding: 5px 20px;
+        width: 80%;
+        line-height: 16px;
+        margin: 10px 0;
+    }
+
+    .button {
+        background-color: $background-btn;
+
+        &:hover {            
+            box-shadow: 5px 5px 8px rgba(206, 206, 206, 0.77);
+        }
+    }
 }
