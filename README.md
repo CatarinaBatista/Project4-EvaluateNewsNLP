@@ -13,7 +13,8 @@ The [Aylien API](https://aylien.com/) is a new Text Analysis API of Natural Lang
 
 ## Get Started
 1. Download files or clone the repository
-2. On the terminal put `npm install` to install all dependencies
+2. Install all dependencies
+    * put `npm install` on the terminal
 3. For use Aylien API you must signing up to get an API key
     * Create a `.env` file that contain your `API_ID` and your `API_KEY`
 4. For start the server you should run that command in the terminal: `npm start`
