@@ -1,6 +1,10 @@
+@import "colors.scss";
+
 header {
     display: flex;
     justify-content: space-between;
     padding: 10px 40px;
-    
+    background-color: $background-header;
+    color: white;
+    height: 40px;
 }

@@ -1,0 +1,9 @@
+@import "colors.scss";
+
+main {
+    .form {
+        border: $borderSection;
+        border-radius: 3px;
+        margin-bottom: 30px;
+    }
+}
