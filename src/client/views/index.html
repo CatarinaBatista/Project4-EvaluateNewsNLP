@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>        
+        <title>Test</title>
     </head>
 
     <body>
@@ -17,15 +17,13 @@
         </header>
 
         <main>
-            <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
-                </form>
-            <section>
+            <form class="form" onsubmit="return Client.handleSubmit(event)">
+                <input id="url" type="url" name="url" value="" placeholder="Insert an URL (eg. https://www.site.com/article)">
+                <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+            </form>
 
             <section>
-                <strong>Form Results:</strong>
+                <strong>Results:</strong>
                 <div id="results"></div>
             </section>
         </main>

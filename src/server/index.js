@@ -2,7 +2,6 @@ var path = require('path')
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const mockAPIResponse = require('./mockAPI.js')
 var aylien = require("aylien_textapi");
 const dotenv = require('dotenv');
 dotenv.config();
@@ -28,21 +27,29 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
-
 console.log(__dirname)
 
 
 
+// Initialize routes
 
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
 })
 
-// designates what port the app will listen to for incoming requests
 
+app.post('/sentiment', function (req, res) {
+    console.log(req);
+    const urlUser = req.body.url;
 
-app.get('/test', function (req, res) {
-    res.send(mockAPIResponse)
+    textapi.sentiment({'url': urlUser}, function(error, response) {
+        if (error === null) {
+            res.send(response);
+        } else {
+            const msg = "Error";
+            res.json(JSON.stringify(msg));
+        }
+    });
 })
 
 
