@@ -19,12 +19,21 @@
         <main>
             <form class="form" onsubmit="return Client.handleSubmit(event)">
                 <input id="url" type="url" name="url" value="" placeholder="Insert an URL (eg. https://www.site.com/article)">
-                <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                <input class="button" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
             </form>
 
             <section>
-                <strong>Results:</strong>
-                <div id="results"></div>
+                <h2>Results:</h2>
+                <div id="results">
+                    <h3>Polarity:</h3>
+                    <p id="polarity"></p>
+
+                    <h3>Subjectivity:</h3>
+                    <p id="subjectivity"></p>
+
+                    <h3>Text:</h3>
+                    <p id="text"></p>
+                </div>
             </section>
         </main>
 
