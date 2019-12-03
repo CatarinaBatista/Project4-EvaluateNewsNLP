@@ -1,9 +1,9 @@
 # Project 4 - Evaluate News with NLP from Front End Developer Nanodegree
 
 ## Table of Contents
-* About
-* API used
-* Get Started
+* [About](#about)
+* [API used](API-used)
+* [Get Started](Get-Started)
 
 
 ## About
