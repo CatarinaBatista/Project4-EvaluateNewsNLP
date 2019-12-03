@@ -2,8 +2,8 @@
 
 ## Table of Contents
 * [About](#about)
-* [API used](#API-used)
-* [Get Started](#Get-Started)
+* [API used](#api-used)
+* [Get Started](#get-started)
 
 
 ## About
