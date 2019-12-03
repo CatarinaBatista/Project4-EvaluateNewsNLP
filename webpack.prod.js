@@ -11,8 +11,7 @@ module.exports = {
     entry: './src/client/index.js',
     mode: 'production',
     output: {
-        path: path.join(__dirname, 'dist'),
-        filename: 'bundle.min.js',
+        path: path.resolve(__dirname, 'dist'),
         libraryTarget: 'var',
         library: 'Client'
     },
@@ -29,6 +28,10 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+            },
+            {
+              test: /\.(png|svg|jpg|gif)$/,
+              use: [ 'file-loader' ],
             }
         ]
     },
