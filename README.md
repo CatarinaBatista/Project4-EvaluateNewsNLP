@@ -8,6 +8,7 @@
 
 ## About
 This project aims to interpret and analyze a text that the user has entered through a URL and has as a result of the polarity, subjectivity, the confidence of both and the analyzed text.
+
 It is a _web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites._
 
 
