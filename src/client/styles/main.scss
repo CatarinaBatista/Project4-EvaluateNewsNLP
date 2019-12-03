@@ -3,17 +3,13 @@
 main {
     padding: 0 30px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 70%;
     grid-gap: 30px;
 
     form {
-        grid-area: 1/1/2/2;
         height: 100%;
     }
 
     section {
-        grid-area: 1/2/2/3;
         height: 100%;
     }
 }
