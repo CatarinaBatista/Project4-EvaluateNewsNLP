@@ -1,20 +1,33 @@
-@import "colors.scss";
+@import "variables.scss";
 
 form {
     padding: 40px;
+    border: $border-form;
+    border-radius: 10px;
 
     input {
         padding: 5px 20px;
-        width: 80%;
-        line-height: 16px;
+        line-height: 18px;
         margin: 10px 0;
+    }
+
+    #url {
+        width: 90%;
     }
 
     .button {
         background-color: $background-btn;
+        border: $border-button;
+        width: 25%;
 
-        &:hover {            
+        &:hover {
             box-shadow: 5px 5px 8px rgba(206, 206, 206, 0.77);
         }
+    }
+
+    .form-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }

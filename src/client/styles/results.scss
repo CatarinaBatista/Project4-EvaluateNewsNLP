@@ -1,0 +1,18 @@
+@import "variables.scss";
+
+section {
+    border: $border-section;
+    margin: 0;
+    padding: 40px;
+    border-radius: 10px;
+
+    h3 {
+        color: $title-color;
+    }
+
+    #results {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
