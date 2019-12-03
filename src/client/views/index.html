@@ -2,14 +2,13 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>
+        <title>Project 4</title>
     </head>
 
     <body>
-
         <header>
             <div class="logo">
-                Logo
+                Project 4
             </div>
             <div class="">
                 Navigation
@@ -17,13 +16,19 @@
         </header>
 
         <main>
-            <form class="form" onsubmit="return Client.handleSubmit(event)">
-                <input id="url" type="url" name="url" value="" placeholder="Insert an URL (eg. https://www.site.com/article)">
-                <input class="button" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+            <form onsubmit="return Client.handleSubmit(event)">
+                <h2><u> Text Analyzer </u></h2>
+                <br>
+                <div class="form-div">
+                    <p>Insert a valid URL bellow:</p>
+                    <input id="url" type="url" name="url" placeholder="Insert a URL (eg. https://www.site.com/article)">
+                    <input class="button" type="submit" name="submit" value="Submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </div>
             </form>
 
             <section>
-                <h2>Results:</h2>
+                <h2><u> Results </u></h2>
+                <br>
                 <div id="results">
                     <h3>Polarity:</h3>
                     <p id="polarity"></p>
@@ -38,7 +43,7 @@
         </main>
 
         <footer>
-            <p>This is a footer</p>
+            <p>&copy Catarina Batista 2019</p>
         </footer>
 
         <script>
