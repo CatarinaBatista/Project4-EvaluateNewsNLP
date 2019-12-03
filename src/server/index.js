@@ -6,6 +6,9 @@ var aylien = require("aylien_textapi");
 const dotenv = require('dotenv');
 dotenv.config();
 
+//Variables
+let projectData = {};
+
 // Aylien engine
 var textapi = new aylien({
     application_id: process.env.API_ID,
@@ -27,12 +30,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
-console.log(__dirname)
-
-
-
 // Initialize routes
-
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
 })
@@ -42,9 +40,15 @@ app.post('/sentiment', function (req, res) {
     console.log(req);
     const urlUser = req.body.url;
 
-    textapi.sentiment({'url': urlUser}, function(error, response) {
+    textapi.sentiment({url: urlUser}, function(error, response) {
         if (error === null) {
-            res.send(response);
+            projectData['polarity'] = response.polarity;
+            projectData['subjectivity'] = response.subjectivity;
+            projectData['polarity_confidence'] = response.polarity_confidence;
+            projectData['subjectivity_confidence'] = response.subjectivity_confidence;
+            
+            response.send(projectData);
+            console.log(projectData)
         } else {
             const msg = "Error";
             res.json(JSON.stringify(msg));
