@@ -7,7 +7,7 @@
 
 
 ## About
-This project aims to
+This project aims to interpret and analyze a text that the user has entered through a URL and has as a result of the polarity, subjectivity, the confidence of both and the analyzed text.
 
 
 ## API used
