@@ -17,8 +17,6 @@
 
         <main>
             <form onsubmit="return Client.handleSubmit(event)">
-                <h2><u> Text Analyzer </u></h2>
-                <br>
                 <div class="form-div">
                     <p>Insert a valid URL bellow:</p>
                     <input id="url" type="url" name="url" placeholder="Insert a URL (eg. https://www.site.com/article)">
@@ -30,14 +28,25 @@
                 <h2><u> Results </u></h2>
                 <br>
                 <div id="results">
-                    <h3>Polarity:</h3>
-                    <p id="polarity"></p>
+                    <card class="mini-card">
+                        <h3>Polarity:</h3>
+                        <p id="polarity"></p>
+                    </card>
 
-                    <h3>Subjectivity:</h3>
-                    <p id="subjectivity"></p>
+                    <card class="mini-card">
+                        <h3>Subjectivity:</h3>
+                        <p id="subjectivity"></p>
+                    </card>
 
-                    <h3>Text:</h3>
-                    <p id="text"></p>
+                    <card class="mini-card">
+                        <h3>Polarity Confidence:</h3>
+                        <p id="polarity-conf"></p>
+                    </card>
+
+                    <card class="mini-card">
+                        <h3>Subjectivity Confidence:</h3>
+                        <p id="subjectivity-conf"></p>
+                    </card>
                 </div>
             </section>
         </main>
