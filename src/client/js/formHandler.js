@@ -1,12 +1,12 @@
-import { validateUrl } from "./validateUrl";
-
 function handleSubmit(event) {
     event.preventDefault()
 
     const baseURL = "http://localhost:8000/sentiment";
     const url = document.getElementById('url').value;
 
-    if (validateUrl(url)) {
+    if (Client.validateUrl(url)) {
+        
+        console.log('aqui')
         fetch(baseURL, {
             method: 'POST',
             mode: 'cors',
@@ -19,7 +19,7 @@ function handleSubmit(event) {
             .then(function (res) {
                 document.getElementById('polarity').innerHTML = res.polarity
                 document.getElementById('subjectivity').innerHTML = res.subjectivity
-                document.getElementById('polarity_confidence-conf').innerHTML = res.polarity_confidence
+                document.getElementById('polarity-conf').innerHTML = res.polarity_confidence
                 document.getElementById('subjectivity-conf').innerHTML = res.subjectivity_confidence
             })
     } else {
