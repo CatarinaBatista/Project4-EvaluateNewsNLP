@@ -1,4 +1,5 @@
-import { handleSubmit } from './js/submitRequest';
+import { handleSubmit } from './js/formHandler';
+import { validateUrl } from './js/validateUrl';
 
 import './styles/base.scss';
 import './styles/footer.scss';
@@ -11,5 +12,6 @@ console.log("CHANGE!!");
 
 
 export {
-    handleSubmit
+    handleSubmit,
+    validateUrl
 }
