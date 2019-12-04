@@ -1,8 +1,10 @@
+// Connect dependencies and libraries
 var path = require('path')
+const cors = require('cors');
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors');
 var aylien = require("aylien_textapi");
+
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -19,15 +21,15 @@ var textapi = new aylien({
 // Start up an instance of app
 const app = express()
 
-// Initialize the main project folder
-app.use(express.static('dist'))
-
 // Configuring express to use body-parser as middle-ware.
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Cors for cross origin allowance
 app.use(cors());
+
+// Initialize the main project folder
+app.use(express.static('dist'))
 
 
 // Initialize routes
@@ -47,11 +49,10 @@ app.post('/sentiment', function (req, res) {
             projectData['polarity_confidence'] = response.polarity_confidence;
             projectData['subjectivity_confidence'] = response.subjectivity_confidence;
             
-            response.send(projectData);
+            res.send(projectData);
             console.log(projectData)
         } else {
-            const msg = "Error";
-            res.json(JSON.stringify(msg));
+            console.log(error)
         }
     });
 })
