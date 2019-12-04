@@ -21,5 +21,10 @@ section {
         margin-bottom: 10px;
         display: flex;
         flex-direction: row;
+        align-items: center;
+    }
+
+    p {
+        padding-left: 30px;
     }
 }
