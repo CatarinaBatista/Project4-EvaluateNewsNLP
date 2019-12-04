@@ -5,8 +5,6 @@ function handleSubmit(event) {
     const url = document.getElementById('url').value;
 
     if (Client.validateUrl(url)) {
-        
-        console.log('aqui')
         fetch(baseURL, {
             method: 'POST',
             mode: 'cors',
@@ -26,24 +24,6 @@ function handleSubmit(event) {
         alert("The URL is not valid. Please check your URL")
 
     }
-    console.log(url)
 }
 
 export {handleSubmit}
-
-/* function aa(event) {
-    event.preventDefault()
-
-    // check what text was put into the form field
-    let formText = document.getElementById('name').value
-    Client.checkForName(formText)
-
-    console.log("::: Form Submitted :::")
-    fetch('http://localhost:8000/test')
-    .then(res => res.json())
-    .then(function(res) {
-        document.getElementById('results').innerHTML = res.message
-    })
-}
-
-export { aa } */
