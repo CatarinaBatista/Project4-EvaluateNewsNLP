@@ -10,7 +10,7 @@ module.exports = {
     devtool: 'source-map',
     stats: 'verbose',
     /* devServer: {
-        port: 8000,
+        port: 8080,
     }, */
     output: {
         libraryTarget: 'var',
@@ -28,7 +28,7 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
-              test: /\.(png|svg|jpg|gif)$/,
+              test: /\.(jpe?g|png|gif|svg)$/,
               use: [ 'file-loader' ],
             }
         ]
